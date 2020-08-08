@@ -8,16 +8,16 @@ Please install the packages required by the `requirements.txt` file.
 
 ## How to use
 
-For reproduction, you can use the script `start.py` to run every task used in the paper
+To reproduce the results of the paper, you can use the script `start.py` and run every task.
 
 `python start.py --job <job> --model <model> --settype <settype> --attack <attack> --firstindex <firstindex> --lastindex <lastindex> --visual <visual>`
 - `job` either `"train"`, `"test"`, `"attack"`, `"augment"`, `"stats"` or `"visualisation"`, selects the action that the script will run (see below for examples)
-- `model` either `"mnist"`, `"cifar10"`, `"mnist_defense_jsma"`, `"mnist_defense_wjsma"`, `"mnist_defense_tjsma"`, `"cifar10_defense_jsma"`, `"cifar10_defense_wjsma"` or `"cifar10_defense_tjsma"`, selects the model / dataset on which the job will be performed (note that `"mnist_defense_jsma"`, `"mnist_defense_wjsma"`, `"mnist_defense_tjsma"`, `"cifar10_defense_jsma"`, `"cifar10_defense_wjsma"` and `"cifar10_defense_tjsma"` are trained on the augmented version of the MNIST and CIFAR10 datasets)
+- `model` either `"mnist"`, `"cifar10"`, `"mnist_defense_jsma"`, `"mnist_defense_wjsma"`, `"mnist_defense_tjsma"`, `"cifar10_defense_jsma"`, `"cifar10_defense_wjsma"` or `"cifar10_defense_tjsma"`, selects the model / dataset on which the job will be performed (note that `"mnist_defense_jsma"`, `"mnist_defense_wjsma"`, `"mnist_defense_tjsma"`, `"cifar10_defense_jsma"`, `"cifar10_defense_wjsma"` and `"cifar10_defense_tjsma"` are trained on the augmented versions of the MNIST and CIFAR10 datasets)
 - `settype` either `"train"` or `"test"`, switches between the train and the test of the dataset
-- `attack` either `"jsma"`, `"wjsma"` or `"tjsma"`, switches between Papernot's JSMA and our implementation of WJSMA and TJSMA
+- `attack` either `"jsma"`, `"wjsma"` or `"tjsma"`, switches between the original implementation of JSMA and our implementations of WJSMA and TJSMA
 - `firstindex` an integer (only used for the attack, specifies the index of the first attacked image in the dataset)
 - `lastindex` an integer (only used for the attack, specifies the index of the last attacked image in the dataset)
-- `visual` either `"probabilities"`, `"single"`, `"line"`, `"square"`, switches between the type of image visualisation
+- `visual` either `"probabilities"`, `"single"`, `"line"`, `"square"`, switches between the type of images visualisation
 
 ### Job examples
 
@@ -74,7 +74,7 @@ In each adversarial sample column, the first (784 for MNIST images and 3072 for 
 
 ### Model Training and Testing Precautions
 
-The joblib files in the `joblib` file are the models that we used for our simulations. If you try to train a new neural networks, these models will be overwritten. To avoid that, you only need to rename the original ones.
+The joblib files in the `joblib` file are the models that we used for our simulations. If you train a new neural network, these models will be overwritten. To avoid that, you only need to rename the original ones.
 
 ## Code usage
 
