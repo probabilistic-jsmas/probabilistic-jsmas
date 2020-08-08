@@ -1,11 +1,10 @@
 # Probabilistic Jacobian-based Saliency Map Attack in Machine Learning
 
-Implementation of WJSMA and TJSMA as decribed in https://arxiv.org/abs/2007.06032
+Original implementation of WJSMA and TJSMA as decribed in https://arxiv.org/abs/2007.06032
 
 ## Installation
 
 Please install the packages required by the `requirements.txt` file.
-In case you encounter some errors after this installation, you can refer to section `Model Training and Testing Precautions` to fix them.
 
 ## How to use
 
@@ -76,3 +75,18 @@ In each adversarial sample column, the first (784 for MNIST images and 3072 for 
 ### Model Training and Testing Precautions
 
 The joblib files in the `joblib` file are the models that we used for our simulations. If you try to train a new neural networks, these models will be overwritten. To avoid that, you only need to rename the original ones.
+
+## Code usage
+
+If you use this code please cite the paper:
+
+```
+@ARTICLE{2020arXiv200706032L,
+	author = {{Loison}, Ant{\'o}nio and {Combey}, Th{\'e}o and {Hajri}, Hatem},
+	title = "{Probabilistic Jacobian-based Saliency Maps Attacks}",
+	journal = {arXiv e-prints},
+	year = 2020,
+	month = jul,
+	eid = {arXiv:2007.06032}
+}
+```
