@@ -1,4 +1,4 @@
-# Probabilistic Jacobian-based Saliency Map Attack in Machine Learning
+# Probabilistic Jacobian-based Saliency Maps Attacks
 
 Original implementation of WJSMA and TJSMA as decribed in https://arxiv.org/abs/2007.06032
 
